@@ -1,0 +1,92 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(275, 100%, 97%);
+}
+.container{
+    border-radius: 10px;
+    width: 100%;
+    max-width: 550px;
+    height: fit-content;
+    margin: 200px auto 0;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 5px 5px hsl(292, 16%, 49%);
+}
+.top{
+    display: inline-flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+li{
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    height: 50px;
+    cursor: pointer;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item h2{
+    font-size: 0.90em;
+}
+img{
+    cursor: pointer;
+}
+
+.plus{
+    position: relative;
+    left: 0;
+    z-index: 50;
+}
+.minus{
+    display: none;
+    z-index: 99;
+}
+.listcontent{
+    margin-top: 8px;
+    display: none;
+    color: #6e6d6d;
+    font-weight: 100;
+}
+.listcontent.active{
+    display: block;
+}
+li.active{
+    height: 135px;
+}
+.minus.unshow{
+    display: block;
+    z-index: 99;
+}
+.plus.active{
+    display: none;
+    
+}
+h2:hover{
+    color:  hsl(292, 72%, 40%);
+}
+
+@media screen and (max-width:375px){
+    .container{
+        height: fit-content;
+        width: 300px;
+    }
+    #last{
+        margin-bottom: 50px;
+        height: 80px;
+        font-size: 0.87em;
+        font-weight: 100;
+    }
+}
